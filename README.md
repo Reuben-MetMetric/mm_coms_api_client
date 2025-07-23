@@ -30,7 +30,7 @@ pip install -e .
 ## Quick Start
 
 ```python
-from coms_api import ApiClient
+from mm_coms_api import ApiClient
 
 # Initialize the client with your API token
 client = ApiClient("your-api-token-here")
@@ -48,7 +48,7 @@ client.send_email(
 You need an API token to use this library. Contact your MetMetric administrator to obtain your authentication token.
 
 ```python
-from coms_api import ApiClient
+from mm_coms_api import ApiClient
 
 client = ApiClient("your-api-token")
 ```
@@ -155,8 +155,8 @@ response = client.send_whatsapp_grid_change_notification(
 The library provides custom exceptions for better error handling:
 
 ```python
-from coms_api import ApiClient
-from coms_api.exceptions import AuthenticationError, APIError, MetMetricError
+from mm_coms_api import ApiClient
+from mm_coms_api.exceptions import AuthenticationError, APIError, MetMetricError
 
 client = ApiClient("your-token")
 
@@ -200,8 +200,8 @@ All methods return a JSON response from the API. A successful response typically
 ## Complete Example
 
 ```python
-from coms_api import ApiClient
-from coms_api.exceptions import AuthenticationError, APIError
+from mm_coms_api import ApiClient
+from mm_coms_api.exceptions import AuthenticationError, APIError
 
 def main():
     # Initialize client
@@ -244,10 +244,8 @@ if __name__ == "__main__":
 
 For SMS and WhatsApp functions, use international format with country codes:
 
-- ✅ Correct: `"+27123456789"` (South Africa)
-- ✅ Correct: `"+1234567890"` (US)
-- ❌ Incorrect: `"0123456789"`
-- ❌ Incorrect: `"123-456-7890"`
+- ✅ Correct: `"27123456789"` (South Africa)
+- ✅ Correct: `"1234567890"` (US)
 
 ## File Attachments
 
