@@ -116,7 +116,7 @@ Send SMS messages to one or more recipients.
 **Example:**
 ```python
 response = client.send_sms(
-    recipients=["+27123456789", "+27987654321"],
+    recipients=["27123456789", "27987654321"],
     text_content="Alert: Power outage detected in Building A. Estimated restoration: 2 hours."
 )
 ```
@@ -218,14 +218,14 @@ def main():
         
         # Send SMS alert
         sms_response = client.send_sms(
-            recipients=["+27123456789"],
+            recipients=["27123456789"],
             text_content="System alert: All systems are now operational."
         )
         print("SMS sent:", sms_response.get('message_id'))
         
         # Send WhatsApp notification
         whatsapp_response = client.send_whatsapp_grid_change_notification(
-            recipients=["+27123456789"],
+            recipients=["27123456789"],
             building_id="HQ-BLDG",
             power_status="online"
         )
