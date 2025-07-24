@@ -29,3 +29,12 @@ classifiers = [
 Homepage = "https://github.com/Reuben-MetMetric/mm_coms_api_client"
 Repository = "https://github.com/Reuben-MetMetric/mm_coms_api_client.git"
 Issues = "https://github.com/Reuben-MetMetric/mm_coms_api_client/issues"
+
+# Alternative: Explicit package specification
+[tool.setuptools]
+packages = ["mm_coms_api"]
+
+# Or use automatic discovery (choose one approach)
+# [tool.setuptools.packages.find]
+# where = ["."]
+# include = ["mm_coms_api*"]
