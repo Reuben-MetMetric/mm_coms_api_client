@@ -30,7 +30,7 @@ pip install -e .
 ## Quick Start
 
 ```python
-from mm_coms_api import ApiClient
+from mmComsClient import ApiClient
 
 # Initialize the client with your API token
 client = ApiClient("your-api-token-here")
@@ -48,7 +48,7 @@ client.send_email(
 You need an API token to use this library. Contact your MetMetric administrator to obtain your authentication token.
 
 ```python
-from mm_coms_api import ApiClient
+from mmComsClient import ApiClient
 
 client = ApiClient("your-api-token")
 ```
@@ -155,8 +155,8 @@ response = client.send_whatsapp_grid_change_notification(
 The library provides custom exceptions for better error handling:
 
 ```python
-from mm_coms_api import ApiClient
-from mm_coms_api.exceptions import AuthenticationError, APIError, MetMetricError
+from mmComsClient import ApiClient
+from mmComsClient.exceptions import AuthenticationError, APIError, MetMetricError
 
 client = ApiClient("your-token")
 
@@ -200,8 +200,8 @@ All methods return a JSON response from the API. A successful response typically
 ## Complete Example
 
 ```python
-from mm_coms_api import ApiClient
-from mm_coms_api.exceptions import AuthenticationError, APIError
+from mmComsClient import ApiClient
+from mmComsClient.exceptions import AuthenticationError, APIError
 
 def main():
     # Initialize client
